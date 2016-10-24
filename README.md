@@ -11,6 +11,46 @@ import:
 using Gadfly
 ```
 
+
+
+
+
+
+
+
+###7 Macros
+ex:
+```
+ex=quote x=2 end
+```
+eval it:
+```
+eval(ex)
+```
+return 2.  
+then we can call the constructor explicitly
+```
+ex = Expr(:call, print, :hello:)
+eval(ex)
+```
+
+modify args
+```
+ex.args[2]="world"
+eval(ex)
+```
+
+
+
+
+
+
+
+
+
+
+
+
 ###8 Calling C, Python, and R
 ```
 Pkg.add('PyCall')
